@@ -1,0 +1,75 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+h4 {
+  color: black;
+}
+
+._denimbackground {
+  background-image: url("http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+._wallpaperbackground {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/97/e4/92/97e4920803e5054f990f8cd529a8c0e4.jpg");
+}
+
+body {background-image:url("http://designreflect.com/wp-content/uploads/2012/09/paper-textures/watercolor-paper-texture.jpg");
+}
+
+._paper1background {
+  background-image:url("http://designreflect.com/wp-content/uploads/2012/09/paper-textures/20-Seamless-Paper-Texture.jpg");
+}
+
+._paper2background {
+  background-image:url("http://designreflect.com/wp-content/uploads/2012/09/paper-textures/hard-paper.jpg");
+}
+
+._paper3background {
+  background-image:url("http://designreflect.com/wp-content/uploads/2012/09/paper-textures/blueprint-paper-texture.jpg");
+}
+
+
+
+._section {
+  padding: 150px 40px 150px 40px;
+}
+
+._sizedImg {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+._btn-circle {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+.image {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+h2.overlay {
+   position: absolute;
+   top: 200px;
+   left: 0;
+   width: 100%;
+   opacity: 0;
+   color: white;
+}
+
+a.darken {
+    display: inline-block;
+    background: black;
+    padding: 0;
+    margin: 0;
+}
+
+a.darken img {
+    display: block;
+}

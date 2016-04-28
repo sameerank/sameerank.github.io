@@ -1,0 +1,188 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+html, body, #canvas {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  min-width:980px;
+  width:100%;
+  height:100%;
+  position: absolute;
+  background-color: #58595B;
+  color: #DDD;
+}
+
+h2 {
+  font-style: italic;
+}
+
+a, a:visited {
+  font-style: normal;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  color: #444;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #222;
+}
+
+a:not(.no-underline):before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:not(.no-underline):hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.accordian {
+  width:100%;
+  height:500px;
+  overflow:hidden;
+  margin:50px auto;
+}
+
+.container {
+  background-color:rgba(92, 183, 91, 0);
+  width:100%;
+  height:500px;
+  overflow:hidden;
+  position: absolute;
+}
+
+.accordian ul.accordian-ul {
+	width: 100%;
+}
+
+.accordian li.accordian-li{
+  position:relative;
+  display:block;
+  width:10%;
+  height:500px;
+  float:left;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+.accordian ul.accordian-ul:hover li.accordian-li{
+  width:9%;
+}
+
+.accordian ul.accordian-ul li.accordian-li:hover{
+  width:64%;
+}
+
+.accordian ul .main-panel{
+  width:60%;
+}
+
+
+.panel-icon {
+  position: absolute;
+  left:25px;
+  top:10px;
+}
+
+.panel-content {
+  height: 100%;
+  width:100%;
+  min-width: 400px;
+  visibility: hidden;
+}
+
+.main-panel .panel-content{
+  padding-top: 10px;
+  padding-left: 0px;
+  visibility: visible;
+}
+
+.accordian ul.accordian-ul:hover .panel-content{
+  visibility: hidden;
+}
+
+.accordian ul.accordian-ul li.accordian-li:hover .panel-content{
+  -webkit-transition-delay: 0.4s; /* Safari */
+  transition-delay: 0.4s;
+  visibility: visible;
+  padding-left: 0px;
+}
+
+.inside-panel {
+  position: relative;
+  width: 400px;
+  margin: 10px auto;
+}
+
+.gradientback{
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  height:300px;
+  background: -moz-linear-gradient(top,  rgba(137,255,241,0) 0%, rgba(88,89,91,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(137,255,241,0)), color-stop(100%,rgba(88,89,91,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(88,89,91,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(88,89,91,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(88,89,91,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(137,255,241,0) 0%,rgba(88,89,91,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0089fff1', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: rgba(221,221,221,1);
+  text-align: center;
+  color: #666;
+}
+
+.links-collection {
+  margin: 30px auto;
+  width: 250px;
+}
+
+.row {
+  width: 100%;
+}
+
+.col {
+  float:left;
+  margin:0;
+  width:25%;
+}
+
+.btn {
+  height: 40px;
+  width: 40px;
+  color: #555;
+  border-radius: 40px;
+  background-color: #DDD;
+  border: 1px solid #DDD;
+}
+
+.btn:hover {
+  color: #DDD;
+  background-color: #555;
+  border: 1px solid #555;
+  -webkit-transition: all 0.4s; /* Safari */
+  transition: all 0.4s;
+}

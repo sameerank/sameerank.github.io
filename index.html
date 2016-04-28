@@ -1,98 +1,199 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <style media="screen">
-
-    </style>
     <meta charset="utf-8">
-    <title>Sameeran's portfolio</title>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-      $('.darken').hover(
-        function() {
-          $(this).find('img').fadeTo(500, 0.5);
-          $(this).find('h2').fadeTo(500, 1.0);
-        },
-        function() {
-          $(this).find('img').fadeTo(500, 1.0);
-          $(this).find('h2').fadeTo(500, 0.0);
-        }
-      );
-    });
-    </script>
-
-
+    <link rel="stylesheet" href="./style.css" charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.1/ocanvas.min.js" charset="utf-8"></script>
+    <title>Sameeran's Portfolio Site</title>
   </head>
   <body>
+    <canvas id="canvas"></canvas>
+    <div class="gradientback"></div>
+    <script src="./animate.js" charset="utf-8"></script>
 
-    <ul class="nav nav-pills">
-      <div class="navbar-collapse collapse" style="padding-right: 80px">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#home"><h4>Home</h4></a></li>
-          <li><a href="#about"><h4>About</h4></a></li>
-          <li><a href="#portfolio"><h4>Portfolio</h4></a></li>
-          <li><a href="#contact"><h4>Contact</h4></a></li>
+    <div class="accordian">
+      <div class="container">
+        <ul class="accordian-ul">
+          <li class="accordian-li" style="background-color: rgba(92, 183, 91, 0.6);">
+            <div class="panel-icon">
+              <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="panel-content">
+              <div class="inside-panel">
+                <span style="font-family:Lobster; font-size: 50px" class="text-info">
+                  Much Ado About Meeting
+                </span>
+                <br/><br/>(React.js, Ruby on Rails, PostgreSQL)<br/><br/>
+                <i>A website inspired by meetup.com for thespian robots and Shakespeare's plays.</i><br/><br/>
+                <ul>
+                  <li>
+                    Utilizes the Flux architectural pattern in a React.js frontend and interfaces with a JSON API
+                    provided by a Ruby on Rails backend.
+                  </li>
+                  <li>
+                    Encrypts passwords using BCrypt, storing sensitive user data as salted hashes in the database.
+                  </li>
+                  <li>
+                    Implements eager loading to prevent N + 1 queries.
+                  </li>
+                </ul>
+                <br /><br /><h2>View it <a href="http://muchadoaboutmeeting.xyz">
+                  live</a> or on <a href="https://github.com/sameerank/MuchAdoAboutMeeting">
+                  github</a></h2>
+              </div>
+            </div>
+          </li>
+          <li class="accordian-li" style="background-color: rgba(58, 135, 173, 0.6);">
+            <div class="panel-icon">
+              <i class="fa fa-leaf fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="panel-content">
+              <div class="inside-panel">
+                <span style="font-family:Lobster; font-size: 50px" class="text-info">
+                  Cellular Automaton
+                </span>
+                <br/><br/>(JavaScript, D3.js)<br/><br/>
+                <i>An engine that implements Conway’s Game of Life, as well as other Life-like cellular automata.</i><br/><br/>
+                <ul>
+                  <li>
+                    Uses D3.js for visualization and animation of the simulation in an SVG.
+                  </li>
+                  <li>
+                    Allows user to draw on the grid to customize their own initial conditions for the simulation.
+                  </li>
+                </ul>
+                <br /><br /><h2>View it <a href="http://sameerank.github.io/cellularAutomaton/">
+                  live</a> or on <a href="https://github.com/sameerank/cellularAutomaton">
+                  github</a></h2>
+              </div>
+            </div>
+          </li>
+          <li class="accordian-li" style="background-color: rgba(191, 151, 82, 0.6);">
+            <div class="panel-icon">
+              <i class="fa fa-database fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="panel-content">
+              <div class="inside-panel">
+                <span style="font-family:Lobster; font-size: 50px" class="text-info">
+                  Active Record Lite
+                </span>
+                <br/><br/>(Ruby, SQLite)<br/><br/>
+                <i>An ORM inspired by the functionality of Active Record.</i><br/><br/>
+                <ul>
+                  <li>
+                    Implements metaprogramming in Ruby to make SQL commands that query a relational database.
+                  </li>
+                  <li>
+                    Defines belongs_to, has_many, and has_one_through relationships among tables.
+                  </li>
+                </ul>
+                <br /><br /><h2>View it on <a href="https://github.com/sameerank/Active-Record-Lite.git">
+                  github</a></h2>
+              </div>
+            </div>
+          </li>
+          <li class="accordian-li" style="background-color: rgba(217, 83, 79, 0.6);">
+            <div class="panel-icon">
+              <i class="fa fa-calculator fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="panel-content">
+              <div class="inside-panel">
+                <span style="font-family:Lobster; font-size: 50px" class="text-info">
+                  The Calculating Calculator
+                </span>
+                <br/><br/>(JavaScript, jQuery)<br/><br/>
+                <i>A JavaScript calculator that performs mathematical operations.</i><br/><br/>
+                <ul>
+                  <li>
+                    Adds, subtracts, multiplies, and divides numbers as defined by keypad inputs.
+                  </li>
+                  <li>
+                    Allows for chaining mathematical operations together until the equal button is clicked.
+                  </li>
+                  <li>
+                    CE resets the input variable; AC resets the memory and the input variable.
+                  </li>
+                </ul>
+                <br /><br /><h2>View it <a href="http://codepen.io/sameerank/full/mVJBdb/">
+                  live</a> on CodePen</h2>
+              </div>
+            </div>
+          </li>
+          <li class="accordian-li main-panel" style="background-color: rgba(93, 192, 222, 0.6);">
+            <div class="panel-icon">
+              <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="panel-content">
+
+              <div class="inside-panel">
+                Hello, hola, et salut! I am <br />
+                <span style="font-family:Lobster; font-size: 50px" class="text-info">
+                  Sameeran Kunche,
+                </span>
+                <br>
+                an intrepid explorer and avid maker of things on the internet.
+                My skillset spans the full web stack: Ruby, Ruby on Rails, JavaScript,
+                jQuery, React.js, Flux, SQL, Git, HTML, and CSS. Previously, I was a
+                computational biologist at UC Irvine, where I studied
+                <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004814">
+                  morphogenesis</a>. There, I became interested in the language of computers. I am also
+                passionate about human <a href="https://www.duolingo.com/skunche">languages</a>.
+                This website, however, is concerned foremost with the former subject,
+                and so I humbly invite you to view to the left a smattering of my creations.
+                <br><br> If you are moved by what you see, feel free to <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                me an <span id="email"></span> or reach me via any of my other <i class="fa fa-home" aria-hidden="true"></i>s on the
+                <i class="fa fa-globe" aria-hidden="true"></i> wide web.
+              </div>
+
+
+              <script type="text/javascript">
+              (function () {
+                var username = "skunche";
+                $('#email').html("<a href=\"mail" + "to:" + new Array(username,"gmail" + "." + "com").join("@") + "\">" + "email" + "</" + "a>");
+              })();
+              </script>
+
+              <div class="links-collection">
+                <div class="row">
+                  <div class="col">
+                    <a target="_blank" href="https://github.com/sameerank" class="no-underline">
+                      <button type="button" class="btn"><i class="fa fa-github fa-2x"></i></button>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a target="_blank" href="https://www.linkedin.com/in/sameerank" class="no-underline">
+                      <button type="button" class="btn"><i class="fa fa-linkedin fa-2x"></i></button>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a target="_blank" href="http://sameerank.tumblr.com/" class="no-underline">
+                      <button type="button" class="btn"><i class="fa fa-tumblr fa-2x"></i></button>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a target="_blank" href="http://codepen.io/sameerank/" class="no-underline">
+                      <button type="button" class="btn"><i class="fa fa-codepen fa-2x" aria-hidden="true"></i></button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+          </li>
         </ul>
       </div>
-    </ul>
-    <div class="container-fluid">
-      <div class="row _section text-center" id = "home">
-        <div>
-          <h1>Hello, hola, et salut.<br>I am <span style="font-family:Lobster; font-size: 50px" class="text-info">Sameeran Kunche</span>,</h1>
-          <h3>an intrepid explorer & avid maker of things on the internet.</h2>
-        </div>
-      </div>
-      <div class="row _section text-center" id = "about">
-        <h1 style="font-family:Lobster; font-size: 50px" class="text-info">About me.</h1>
-        <div class="col-md-6">
-          <br /><br /><br /><br />
-          <img src="http://res.cloudinary.com/deh4rnozs/image/upload/c_scale,w_300/v1457937105/SK_app_academy_syiwtl.png" class="img-circle"></img>
-        </div>
-        <div class="col-md-6">
-          <h3 class="text-left">I am currently looking for opportunities to apply my web development skills in the San Francisco Bay Area. My skillset spans the full web stack: Ruby, Ruby on Rails, JavaScript, jQuery, React.js, Flux, SQL, Git, HTML, CSS. I stumbled upon my interest in programming and algorithms whilst researching as a PhD student in Biomedical Engineering at UC Irvine, where I studied <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004814">mathematical models of growth control in biological tissues</a>. In addition to computer languages, I am also passionate about <a href="https://www.duolingo.com/skunche">human language</a>. This website, however, is concerned foremost with the former subject, and so I humbly invite you to view below a smattering of sundries that I have fashioned to showcase some of my competencies.</h3>
-        </div>
-      </div>
-      <div class="row text-center _section" id="portfolio">
-        <div style="padding-bottom: 20px">
-          <h1 style="font-family:Lobster; font-size: 50px" class="text-info"> Some of the things I've made.</h1>
-        </div>
-        <div class="row" style="padding-bottom: 20px">
-          <div class="col-md-4">
-            <a href="http://muchadoaboutmeeting.xyz" class="darken _sizedImg img-rounded"><img src="http://res.cloudinary.com/deh4rnozs/image/upload/c_scale,h_300,w_300/v1457936558/muchAdoAboutMeetingScreenCap_iryniz.png" alt="image" class="img-rounded"><h2 class="overlay">Much Ado <br />About Meeting</h2></a>
-          </div>
-          <div class="col-md-4">
-            <a href="http://www.sameerank.xyz/cellularAutomaton" class="darken _sizedImg img-rounded"><img src="http://res.cloudinary.com/deh4rnozs/image/upload/c_scale,h_300,w_300/v1457936556/cellularAutomataScreenCap_pearur.png" alt="image" class="img-rounded"><h2 class="overlay">Cellular Automaton</h2></a>
-          </div>
-          <div class="col-md-4">
-            <a href="https://github.com/sameerank/Active-Record-Lite" class="darken _sizedImg img-rounded"><img src="http://res.cloudinary.com/deh4rnozs/image/upload/c_scale,h_300,w_300/v1457936834/ActiveRecordLiteScreenCap_zx6nhf.png" alt="image" class="img-rounded"><h2 class="overlay">Active Record Lite</h2></a>
-          </div>
-        </div>
-      </div>
-      <div class="row _section text-center _paperbackground" id="contact">
-        <h1>Wasn't that riveting?<br><br><span style="font-family:Lobster; font-size: 50px" class="text-info">Let's chat.</span><br><br> You can <i class="glyphicon glyphicon-send"></i> me an e-mail (skunche[at]gmail[dot]com) or reach me via any of my other <i class="glyphicon glyphicon-home"></i>s on the <i class="glyphicon glyphicon-globe"></i> wide web.</h1>
-        <div style="padding: 40px 200px 0px 200px" class="row">
-          <div class="col-md-4">
-            <a target="_blank" href="https://github.com/sameerank">
-              <button type="button" class="btn btn-success _btn-circle"><i class="fa fa-github fa-2x"></i></button></a>
-          </div>
-          <div class="col-md-4">
-            <a target="_blank" href="https://www.linkedin.com/in/sameerank">
-              <button type="button" class="btn btn-warning _btn-circle"><i class="fa fa-linkedin fa-2x"></i></button></a>
-          </div>
-          <div class="col-md-4">
-            <a target="_blank" href="http://sameerank.tumblr.com/">
-              <button type="button" class="btn btn-primary _btn-circle"><i class="fa fa-tumblr fa-2x"></i></button></a>
-          </div>
-        </div>
-      </div>
+    </div>
+
+    <div class="footer">
+      Made by me! Check out the <a href="https://github.com/sameerank/debounce-vs-throttle">source code</a>.
     </div>
   </body>
 </html>

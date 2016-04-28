@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style media="screen">
+
+    </style>
+    <meta charset="utf-8">
+    <title>Sameeran's portfolio</title>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('.darken').hover(
+        function() {
+          $(this).find('img').fadeTo(500, 0.5);
+          $(this).find('h2').fadeTo(500, 1.0);
+        },
+        function() {
+          $(this).find('img').fadeTo(500, 1.0);
+          $(this).find('h2').fadeTo(500, 0.0);
+        }
+      );
+    });
+    </script>
+
+
+  </head>
+  <body>
+
+    <ul class="nav nav-pills">
+      <div class="navbar-collapse collapse" style="padding-right: 80px">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home"><h4>Home</h4></a></li>
+          <li><a href="#about"><h4>About</h4></a></li>
+          <li><a href="#portfolio"><h4>Portfolio</h4></a></li>
+          <li><a href="#contact"><h4>Contact</h4></a></li>
+        </ul>
+      </div>
+    </ul>
+    <div class="container-fluid">
+      <div class="row _section text-center" id = "home">
+        <div>
+          <h1>Hello, hola, et salut.<br>I am <span style="font-family:Lobster; font-size: 50px" class="text-info">Sameeran Kunche</span>,</h1>
+          <h3>an intrepid explorer & avid maker of things on the internet.</h2>
+        </div>
+      </div>
+      <div class="row _section text-center" id = "about">
+        <h1 style="font-family:Lobster; font-size: 50px" class="text-info">About me.</h1>
+        <div class="col-md-6">
+          <br /><br /><br /><br />
+          <img src="http://res.cloudinary.com/deh4rnozs/image/upload/c_scale,w_300/v1457937105/SK_app_academy_syiwtl.png" class="img-circle"></img>
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-left">I am currently looking for opportunities to apply my web development skills in the San Francisco Bay Area. My skillset spans the full web stack: Ruby, Ruby on Rails, JavaScript, jQuery, React.js, Flux, SQL, Git, HTML, CSS. I stumbled upon my interest in programming and algorithms whilst researching as a PhD student in Biomedical Engineering at UC Irvine, where I studied <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004814">mathematical models of growth control in biological tissues</a>. In addition to computer languages, I am also passionate about <a href="https://www.duolingo.com/skunche">human language</a>. This website, however, is concerned foremost with the former subject, and so I humbly invite you to view below a smattering of sundries that I have fashioned to showcase some of my competencies.</h3>
+        </div>
+      </div>
+      <div class="row text-center _section" id="portfolio">
+        <div style="padding-bottom: 20px">
+          <h1 style="font-family:Lobster; font-size: 50px" class="text-info"> Some of the things I've made.</h1>
+        </div>
+        <div class="row" style="padding-bottom: 20px">
+          <div class="col-md-4">
+            <a href="http://muchadoaboutmeeting.xyz" class="darken _sizedImg img-rounded"><img src="http://res.cloudinary.com/deh4rnozs/image/upload/c_scale,h_300,w_300/v1457936558/muchAdoAboutMeetingScreenCap_iryniz.png" alt="image" class="img-rounded"><h2 class="overlay">Much Ado <br />About Meeting</h2></a>
+          </div>
+          <div class="col-md-4">
+            <a href="http://www.sameerank.xyz/cellularAutomaton" class="darken _sizedImg img-rounded"><img src="http://res.cloudinary.com/deh4rnozs/image/upload/c_scale,h_300,w_300/v1457936556/cellularAutomataScreenCap_pearur.png" alt="image" class="img-rounded"><h2 class="overlay">Cellular Automaton</h2></a>
+          </div>
+          <div class="col-md-4">
+            <a href="https://github.com/sameerank/Active-Record-Lite" class="darken _sizedImg img-rounded"><img src="http://res.cloudinary.com/deh4rnozs/image/upload/c_scale,h_300,w_300/v1457936834/ActiveRecordLiteScreenCap_zx6nhf.png" alt="image" class="img-rounded"><h2 class="overlay">Active Record Lite</h2></a>
+          </div>
+        </div>
+      </div>
+      <div class="row _section text-center _paperbackground" id="contact">
+        <h1>Wasn't that riveting?<br><br><span style="font-family:Lobster; font-size: 50px" class="text-info">Let's chat.</span><br><br> You can <i class="glyphicon glyphicon-send"></i> me an e-mail (skunche[at]gmail[dot]com) or reach me via any of my other <i class="glyphicon glyphicon-home"></i>s on the <i class="glyphicon glyphicon-globe"></i> wide web.</h1>
+        <div style="padding: 40px 200px 0px 200px" class="row">
+          <div class="col-md-4">
+            <a target="_blank" href="https://github.com/sameerank">
+              <button type="button" class="btn btn-success _btn-circle"><i class="fa fa-github fa-2x"></i></button></a>
+          </div>
+          <div class="col-md-4">
+            <a target="_blank" href="https://www.linkedin.com/in/sameerank">
+              <button type="button" class="btn btn-warning _btn-circle"><i class="fa fa-linkedin fa-2x"></i></button></a>
+          </div>
+          <div class="col-md-4">
+            <a target="_blank" href="http://sameerank.tumblr.com/">
+              <button type="button" class="btn btn-primary _btn-circle"><i class="fa fa-tumblr fa-2x"></i></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

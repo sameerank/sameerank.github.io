@@ -11,7 +11,8 @@ html, body, #canvas {
   height:100%;
   position: absolute;
   background-color: #58595B;
-  color: #DDD;
+  color: #EEE;
+  background-image:url("http://designreflect.com/wp-content/uploads/2012/09/paper-textures/watercolor-paper-texture.jpg")
 }
 
 h2 {
@@ -27,7 +28,7 @@ a, a:visited {
 }
 
 a:hover {
-  color: #222;
+  color: #333;
 }
 
 a:not(.no-underline):before {
@@ -37,7 +38,7 @@ a:not(.no-underline):before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #333;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -129,30 +130,15 @@ a:not(.no-underline):hover:before {
   margin: 10px auto;
 }
 
-.gradientback{
-  position:absolute;
-  bottom:0px;
-  left:0px;
-  width:100%;
-  height:300px;
-  background: -moz-linear-gradient(top,  rgba(137,255,241,0) 0%, rgba(88,89,91,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(137,255,241,0)), color-stop(100%,rgba(88,89,91,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(88,89,91,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(88,89,91,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(137,255,241,0) 0%,rgba(88,89,91,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(137,255,241,0) 0%,rgba(88,89,91,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0089fff1', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-}
-
 .footer {
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 0.5rem;
-  background-color: rgba(221,221,221,1);
   text-align: center;
-  color: #666;
+  background-color: #999;
+  color: #EEE;
 }
 
 .links-collection {
@@ -175,12 +161,12 @@ a:not(.no-underline):hover:before {
   width: 40px;
   color: #555;
   border-radius: 40px;
-  background-color: #DDD;
-  border: 1px solid #DDD;
+  background-color: #EEE;
+  border: 1px solid #EEE;
 }
 
 .btn:hover {
-  color: #DDD;
+  color: #EEE;
   background-color: #555;
   border: 1px solid #555;
   -webkit-transition: all 0.4s; /* Safari */
